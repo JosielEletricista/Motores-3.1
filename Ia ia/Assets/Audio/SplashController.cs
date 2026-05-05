@@ -9,7 +9,6 @@ public class SplashController : MonoBehaviour
 
     void GoToMenu()
     {
-        GameManager.Instance.SetState(GameManager.GameState.MenuPrincipal);
         GameManager.Instance.LoadScene("MenuPrincipal");
     }
 }
