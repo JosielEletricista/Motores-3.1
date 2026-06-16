@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            // Escuta mudança de cena
+            // Escuta mudanÃ§a de cena
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     public void AssignPlayerInput(PlayerInput input)
     {
         playerInput = input;
-        Debug.Log("Input atribuído ao jogador.");
+        Debug.Log("Input atribuÃ­do ao jogador.");
     }
 
     void FindPlayerInput()
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // Só roda lógica se estiver na cena _Boot
+        // SÃ³ roda lÃ³gica se estiver na cena _Boot
         if (SceneManager.GetActiveScene().name == "_Boot")
         {
             SetState(GameState.Iniciando);
@@ -126,9 +126,32 @@ public class GameManager : MonoBehaviour
         {
             SetState(GameState.Gameplay);
 
-            // Aqui faz a alocação de input quando o player existir
+            // ðŸ”¥ RESET DAS MOEDAS
+            PlayerObserverManager.ResetCoins();
+
+            // ðŸ”¥ CARREGA GUI (sem duplicar)
+            if (!IsSceneLoaded("GUI"))
+            {
+                SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+            }
+
+            // Aqui faz a alocaÃ§Ã£o de input quando o player existir
             Invoke(nameof(FindPlayerInput), 0.5f);
         }
+    }
+
+    #endregion
+
+    #region Utils
+
+    bool IsSceneLoaded(string name)
+    {
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            if (SceneManager.GetSceneAt(i).name == name)
+                return true;
+        }
+        return false;
     }
 
     #endregion
