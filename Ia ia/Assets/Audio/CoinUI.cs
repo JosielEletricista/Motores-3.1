@@ -3,7 +3,8 @@ using TMPro;
 
 public class CoinUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI coinText;
+    [SerializeField] private TextMeshProUGUI player1CoinText;
+    [SerializeField] private TextMeshProUGUI player2CoinText;
 
     private void OnEnable()
     {
@@ -17,11 +18,12 @@ public class CoinUI : MonoBehaviour
 
     private void Start()
     {
-        UpdateUI(0); // começa em 0
+        UpdateUI(0, 0);
     }
 
-    void UpdateUI(int value)
+    private void UpdateUI(int player1Coins, int player2Coins)
     {
-        coinText.text = "Estrelas: " + value;
+        player1CoinText.text = "Estrelas: " + player1Coins;
+        player2CoinText.text = "Estrelas: " + player2Coins;
     }
 }
