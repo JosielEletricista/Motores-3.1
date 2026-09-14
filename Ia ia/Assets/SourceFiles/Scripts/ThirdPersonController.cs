@@ -218,45 +218,34 @@ namespace StarterAssets
         }
 
         private void CameraRotation()
-        {
-            // If respawning, reset to starting position and rotation
-            if (IsRespawning)
-            {
-                _cinemachineTargetYaw = 0f;
-                _cinemachineTargetPitch = 0f;
+{
+    if (IsRespawning)
+    {
+        _cinemachineTargetYaw = transform.eulerAngles.y;
+        _cinemachineTargetPitch = 0f;
 
-                // Reset Cinemachine Camera Target to its starting state
-                CinemachineCameraTarget.transform.position = _cameraStartingPosition;
-                CinemachineCameraTarget.transform.rotation = _cameraStartingRotation;
+        CinemachineCameraTarget.transform.rotation = Quaternion.Euler(
+            0f,
+            _cinemachineTargetYaw,
+            0f
+        );
 
-                IsRespawning = false;
-                return;
-            }
+        IsRespawning = false;
+        return;
+    }
 
-            // If there is an input and camera position is not fixed
-            if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
-            {
-                float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
+    // A câmera acompanha a direção para a qual o personagem está olhando
+    _cinemachineTargetYaw = transform.eulerAngles.y;
 
-                _cinemachineTargetYaw +=
-                    _input.look.x * deltaTimeMultiplier * LookSensitivity.x;
+    // Mantém a câmera na horizontal
+    _cinemachineTargetPitch = 0f;
 
-                _cinemachineTargetPitch +=
-                    _input.look.y * deltaTimeMultiplier * LookSensitivity.y;
-            }
-
-            _cinemachineTargetYaw =
-                ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
-
-            _cinemachineTargetPitch =
-                ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
-
-            CinemachineCameraTarget.transform.rotation = Quaternion.Euler(
-                _cinemachineTargetPitch + CameraAngleOverride,
-                _cinemachineTargetYaw,
-                0.0f
-            );
-        }
+    CinemachineCameraTarget.transform.rotation = Quaternion.Euler(
+        _cinemachineTargetPitch,
+        _cinemachineTargetYaw,
+        0f
+    );
+}
 
         private void Move()
         {

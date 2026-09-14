@@ -3,34 +3,47 @@ using StarterAssets;
 
 public class Coin : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private static int totalCoins;
+    private static int collectedCoins;
+
+    private void Start()
     {
-        if (other.CompareTag("Player"))
-        {
-            ThirdPersonController player =
-                other.GetComponent<ThirdPersonController>();
-
-            if (player != null)
-            {
-                PlayerObserverManager.AddCoin(player.playerID);
-                player.IncreaseSpeed();
-
-                Destroy(gameObject);
-
-                Invoke(nameof(CheckGameFinished), 0.1f);
-            }
-        }
+        totalCoins++;
     }
 
-    private void CheckGameFinished()
+    private void OnTriggerEnter(Collider other)
     {
-        Coin[] remainingCoins = FindObjectsByType<Coin>(
-            FindObjectsInactive.Exclude,
-            FindObjectsSortMode.None
+        if (!other.CompareTag("Player"))
+            return;
+
+        ThirdPersonController player =
+            other.GetComponent<ThirdPersonController>();
+
+        if (player == null)
+            return;
+
+        // Adiciona a estrela ao jogador
+        PlayerObserverManager.AddCoin(player.playerID);
+
+        // Aumenta a velocidade
+        player.IncreaseSpeed();
+
+        // Conta a estrela coletada
+        collectedCoins++;
+
+        // Remove a estrela
+        Destroy(gameObject);
+
+        Debug.Log(
+            "Estrelas coletadas: " + collectedCoins +
+            " / " + totalCoins
         );
 
-        if (remainingCoins.Length == 0)
+        // Verifica se todas foram coletadas
+        if (collectedCoins >= totalCoins)
         {
+            Debug.Log("TODAS AS ESTRELAS FORAM COLETADAS!");
+
             PlayerObserverManager.FinishGame();
         }
     }
