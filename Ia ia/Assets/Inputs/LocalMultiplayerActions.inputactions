@@ -201,7 +201,7 @@
                 {
                     "name": "",
                     "id": "ff6dcc36-e7fd-4238-8773-d6da757cb2b2",
-                    "path": "<Keyboard>/rightCtrl",
+                    "path": "<Keyboard>/numpad4",
                     "interactions": "",
                     "processors": "",
                     "groups": ";KeyboardP2",
@@ -234,7 +234,7 @@
                 {
                     "name": "",
                     "id": "fa7b7811-4ed1-4d67-9df8-8800babe7288",
-                    "path": "<Keyboard>/rightShift",
+                    "path": "<Keyboard>/numpad5",
                     "interactions": "",
                     "processors": "",
                     "groups": ";KeyboardP2",
