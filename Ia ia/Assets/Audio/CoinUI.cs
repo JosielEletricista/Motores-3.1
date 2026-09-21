@@ -23,7 +23,8 @@ public class CoinUI : MonoBehaviour
 
     private void UpdateUI(int player1Coins, int player2Coins)
     {
-        player1CoinText.text = "Estrelas: " + player1Coins;
-        player2CoinText.text = "Estrelas: " + player2Coins;
+        // CORRIGIDO: este contador é de MOEDAS
+        player1CoinText.text = "Moedas: " + player1Coins;
+        player2CoinText.text = "Moedas: " + player2Coins;
     }
 }
