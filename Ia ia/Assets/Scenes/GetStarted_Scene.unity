@@ -1215,6 +1215,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 773467610540482966, guid: b927e029c38a7a84d9ed492765fb3cdb, type: 3}
   m_PrefabInstance: {fileID: 702985185}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &708113254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+  m_PrefabInstance: {fileID: 2025559848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &708113256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708113254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ecb69580b9b1549bdf9f98a9b7e42e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoboSetup
+  playerID: 2
+  allRobots:
+  - {fileID: 11400000, guid: 44983804c78d66f47834642741ae7b82, type: 2}
+  - {fileID: 11400000, guid: e6703df7944162a46bf020a946d7580f, type: 2}
+  - {fileID: 11400000, guid: 06d7a0d910a3f424bb5b7ce84fd95301, type: 2}
+  - {fileID: 11400000, guid: 55d692704ff07914b83b7c72b7af22f6, type: 2}
+  - {fileID: 11400000, guid: 38c4262aa29e5844ab7ff9f59f9d5786, type: 2}
 --- !u!1001 &719742233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3186,6 +3210,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 773467610540482966, guid: b927e029c38a7a84d9ed492765fb3cdb, type: 3}
   m_PrefabInstance: {fileID: 1262487965}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1292683598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+  m_PrefabInstance: {fileID: 1573130407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1292683600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292683598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ecb69580b9b1549bdf9f98a9b7e42e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoboSetup
+  playerID: 1
+  allRobots:
+  - {fileID: 11400000, guid: 44983804c78d66f47834642741ae7b82, type: 2}
+  - {fileID: 11400000, guid: e6703df7944162a46bf020a946d7580f, type: 2}
+  - {fileID: 11400000, guid: 06d7a0d910a3f424bb5b7ce84fd95301, type: 2}
+  - {fileID: 11400000, guid: 55d692704ff07914b83b7c72b7af22f6, type: 2}
+  - {fileID: 11400000, guid: 38c4262aa29e5844ab7ff9f59f9d5786, type: 2}
 --- !u!1 &1297666640
 GameObject:
   m_ObjectHideFlags: 0
@@ -4191,6 +4239,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2563429732134213952, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      propertyPath: selectedRoboData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563429732134213952, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       propertyPath: RotationSmoothTime
       value: 0.223
       objectReference: {fileID: 0}
@@ -4286,6 +4338,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1292683600}
     - targetCorrespondingSourceObject: {fileID: 5744773588333972899, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 110859367}
@@ -5621,6 +5676,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 708113256}
     - targetCorrespondingSourceObject: {fileID: 5744773588333972899, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 619528470}

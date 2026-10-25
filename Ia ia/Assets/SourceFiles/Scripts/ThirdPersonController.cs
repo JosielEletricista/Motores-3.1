@@ -16,6 +16,7 @@ namespace StarterAssets
     {
         [Header("Player")]
         public int playerID = 1;
+        [SerializeField] private RoboData selectedRoboData;
 
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
