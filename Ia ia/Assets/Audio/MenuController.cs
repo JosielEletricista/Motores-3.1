@@ -4,7 +4,7 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        GameManager.Instance.LoadScene("GetStarted_Scene");
+        GameManager.Instance.LoadScene("CharacterSelection_Scene");
     }
 
     public void QuitGame()

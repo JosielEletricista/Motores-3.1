@@ -57,4 +57,9 @@ public class RobotKnockback : MonoBehaviour
             velocidadeImpulso.y = 0f;
         }
     }
+    // NOVO: limpa o impulso ao reiniciar um round
+    public void ResetKnockback()
+    {
+        velocidadeImpulso = Vector3.zero;
+    }
 }
