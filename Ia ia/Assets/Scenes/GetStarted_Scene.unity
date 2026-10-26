@@ -1239,6 +1239,49 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 06d7a0d910a3f424bb5b7ce84fd95301, type: 2}
   - {fileID: 11400000, guid: 55d692704ff07914b83b7c72b7af22f6, type: 2}
   - {fileID: 11400000, guid: 38c4262aa29e5844ab7ff9f59f9d5786, type: 2}
+--- !u!114 &708113258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708113254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2051c5dbde96a540a6b241f67051e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushInputReceiver
+--- !u!114 &708113259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708113254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c78a535874e06448d5018a58647554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushController
+  playerID: 2
+  alcance: 2.5
+  tempoRecarga: 2
+  forcaVertical: 5
+  barraRecarga: {fileID: 0}
+--- !u!114 &708113260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708113254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0140e21388b64fbba5b71c5de5a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RobotKnockback
+  gravidade: -20
+  desaceleracao: 12
 --- !u!1001 &719742233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3234,6 +3277,49 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 06d7a0d910a3f424bb5b7ce84fd95301, type: 2}
   - {fileID: 11400000, guid: 55d692704ff07914b83b7c72b7af22f6, type: 2}
   - {fileID: 11400000, guid: 38c4262aa29e5844ab7ff9f59f9d5786, type: 2}
+--- !u!114 &1292683601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292683598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2051c5dbde96a540a6b241f67051e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushInputReceiver
+--- !u!114 &1292683602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292683598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c78a535874e06448d5018a58647554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushController
+  playerID: 1
+  alcance: 2.5
+  tempoRecarga: 2
+  forcaVertical: 5
+  barraRecarga: {fileID: 0}
+--- !u!114 &1292683603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292683598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0140e21388b64fbba5b71c5de5a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RobotKnockback
+  gravidade: -20
+  desaceleracao: 12
 --- !u!1 &1297666640
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,6 +4427,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1292683600}
+    - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1292683603}
+    - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1292683602}
+    - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1292683601}
     - targetCorrespondingSourceObject: {fileID: 5744773588333972899, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 110859367}
@@ -5679,6 +5774,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 708113256}
+    - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 708113260}
+    - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 708113259}
+    - targetCorrespondingSourceObject: {fileID: 5633379113638269974, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 708113258}
     - targetCorrespondingSourceObject: {fileID: 5744773588333972899, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 619528470}
