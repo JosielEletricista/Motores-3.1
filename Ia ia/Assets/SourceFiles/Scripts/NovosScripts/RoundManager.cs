@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -41,7 +40,7 @@ public class RoundManager : MonoBehaviour
 
         Instance = this;
 
-        // NOVO: começa uma partida com o placar zerado
+        // Começa uma partida com o placar zerado
         Player1Rounds = 0;
         Player2Rounds = 0;
         WinnerPlayerID = 0;
@@ -64,7 +63,8 @@ public class RoundManager : MonoBehaviour
             else if (jogador.playerID == 2)
                 player2 = jogador;
         }
-        // NOVO: obtém os nomes dos robôs selecionados
+
+        // Obtém os nomes dos robôs selecionados via RoboSetup
         if (player1 != null)
         {
             RoboSetup setup = player1.GetComponent<RoboSetup>();
@@ -124,6 +124,9 @@ public class RoundManager : MonoBehaviour
     {
         yield return new WaitForSeconds(tempoAntesDeReiniciar);
 
+        // Reseta as moedas de todos os jogadores na interface e no Observer[cite: 16]
+        PlayerObserverManager.ResetCoins();
+
         EncontrarJogadores();
 
         ReposicionarJogador(player1, spawnP1);
@@ -165,6 +168,13 @@ public class RoundManager : MonoBehaviour
 
         if (knockback != null)
             knockback.ResetKnockback();
+
+        // Reseta a velocidade do player para o valor base original do seu RoboData
+        RoboSetup setup = jogador.GetComponent<RoboSetup>();
+        if (setup != null && setup.GetAssignedData() != null)
+        {
+            jogador.MoveSpeed = setup.GetAssignedData().baseSpeed;
+        }
     }
 
     private void EncerrarPartida(int vencedor)
@@ -179,7 +189,7 @@ public class RoundManager : MonoBehaviour
 
     private IEnumerator VoltarParaSelecao()
     {
-        // Mantém a mensagem de vitória visível por 3 segundos
+        // Mantém a mensagem de vitória visível por 3 segundos antes de voltar
         yield return new WaitForSeconds(3f);
 
         if (GameManager.Instance != null)
